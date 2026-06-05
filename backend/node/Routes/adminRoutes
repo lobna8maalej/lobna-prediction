@@ -1,0 +1,23 @@
+const express = require("express");
+const router = express.Router();
+
+const autorize = require("../middleware/autorize");
+
+/* =========================
+   ADMIN ROUTE
+========================= */
+
+router.get(
+  "/admin",
+  autorize,
+  (req, res) => {
+
+    res.json({
+      message: "Bienvenue Admin",
+      user: req.user,
+    });
+
+  }
+);
+
+module.exports = router;

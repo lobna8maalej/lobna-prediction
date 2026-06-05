@@ -1,0 +1,128 @@
+/* Fond */
+.auth-container {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #fff0f5;
+padding: 20px;
+}
+
+/* Carte */
+.auth-card {
+width: 100%;
+max-width: 500px;
+background: #ffffff;
+padding: 40px;
+border-radius: 16px;
+border: 1px solid #f9c5d5;
+box-shadow: 0 4px 15px rgba(244, 114, 182, 0.15);
+}
+
+/* Titres */
+.auth-card h1 {
+text-align: center;
+color: #db2777;
+margin-bottom: 10px;
+font-size: 2rem;
+}
+
+.auth-subtitle {
+text-align: center;
+color: #9d174d;
+margin-bottom: 30px;
+}
+
+/* Formulaire */
+.auth-form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.form-group {
+width: 100%;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+color: #831843;
+}
+
+/* Inputs */
+.form-group input {
+width: 100%;
+padding: 15px;
+font-size: 16px;
+border: 1px solid #f9a8d4;
+border-radius: 10px;
+box-sizing: border-box;
+transition: all 0.2s ease;
+background: #fffafc;
+}
+
+.form-group input:focus {
+outline: none;
+border-color: #ec4899;
+box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
+
+/* Bouton */
+.auth-submit {
+padding: 15px;
+background: #ec4899;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.auth-submit:hover {
+background: #db2777;
+}
+
+/* Message d'erreur */
+.error-message {
+background: #ffe4e6;
+color: #be123c;
+padding: 12px;
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+/* Lien */
+.auth-link {
+margin-top: 25px;
+text-align: center;
+color: #9d174d;
+}
+
+.auth-link a {
+color: #ec4899;
+text-decoration: none;
+font-weight: 600;
+}
+
+.auth-link a:hover {
+text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+.auth-card {
+padding: 25px;
+}
+
+.auth-card h1 {
+font-size: 1.7rem;
+}
+
+.form-group input {
+padding: 14px;
+}
+}

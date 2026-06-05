@@ -1,0 +1,149 @@
+.ca-container {
+  padding: 30px;
+  animation: fadeIn 1s ease-in-out;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.ca-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 25px;
+  animation: slideDown 0.8s ease;
+}
+
+/* IFRAME */
+.ca-iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ca-iframe {
+  width: 100%;
+  max-width: 1200px;
+  height: 650px;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  animation: zoomIn 1s ease;
+}
+
+.ca-iframe:hover {
+  transform: scale(1.01) translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* CARD RESULT */
+.ca-card {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  animation: popIn 0.8s ease;
+}
+
+.ca-subtitle {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.ca-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #16a34a;
+  animation: pulse 2s infinite;
+}
+
+/* CHART */
+.ca-chart {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease;
+}
+
+/* STATES */
+.ca-loading {
+  text-align: center;
+  color: #2563eb;
+}
+
+.ca-error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.ca-waiting {
+  text-align: center;
+  color: #64748b;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .ca-iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ca-iframe {
+    height: 400px;
+  }
+
+  .ca-value {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ca-iframe {
+    height: 300px;
+  }
+
+  .ca-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,205 @@
+/* =========================
+   🌸 KANTRA PINK THEME
+========================= */
+
+.kantra-container {
+  padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff0f6, #ffe6f0, #fff5fa);
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeInPage 1s ease;
+}
+
+/* =========================
+   ✨ TITLE (PINK GLOW)
+========================= */
+
+.kantra-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1f1f1f;
+
+  animation: pinkGlow 3s infinite ease-in-out;
+}
+
+/* =========================
+   🪟 IFRAME WRAPPER
+========================= */
+
+.kantra-iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+/* =========================
+   📊 IFRAME (ROSE + SOFT SHADOW)
+========================= */
+
+.kantra-iframe {
+  width: 90%;
+  max-width: 1050px;
+  height: 500px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: white;
+
+  box-shadow:
+    0 15px 50px rgba(236, 72, 153, 0.18),
+    0 0 70px rgba(244, 114, 182, 0.15);
+
+  animation: floatPink 5s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.kantra-iframe:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 25px 80px rgba(236, 72, 153, 0.30);
+}
+
+/* =========================
+   📥 INPUTS
+========================= */
+
+.kantra-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.kantra-inputs input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #f9a8d4;
+  outline: none;
+  transition: 0.3s;
+}
+
+.kantra-inputs input:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.25);
+}
+
+/* =========================
+   🔘 BUTTON
+========================= */
+
+.kantra-inputs button {
+  padding: 10px 15px;
+  background: #ec4899;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kantra-inputs button:hover {
+  background: #db2777;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   ❌ ERROR
+========================= */
+
+.kantra-error {
+  text-align: center;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* =========================
+   📊 KPI CARDS
+========================= */
+
+.kantra-cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.kantra-card {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+
+  padding: 20px;
+  border-radius: 15px;
+
+  min-width: 140px;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.12);
+
+  animation: popUp 0.8s ease;
+}
+
+.kantra-card.highlight {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* =========================
+   📈 CHART BOX
+========================= */
+
+.kantra-box {
+  margin-top: 25px;
+  padding: 20px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.12);
+}
+
+/* =========================
+   ✨ ANIMATIONS (NEW STYLE)
+========================= */
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pinkGlow {
+  0% { text-shadow: 0 0 5px rgba(236,72,153,0.2); }
+  50% { text-shadow: 0 0 25px rgba(244,114,182,0.5); }
+  100% { text-shadow: 0 0 5px rgba(236,72,153,0.2); }
+}
+
+@keyframes floatPink {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes popUp {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* =========================
+   📱 RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .kantra-iframe {
+    height: 380px;
+  }
+
+  .kantra-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

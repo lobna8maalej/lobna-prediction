@@ -1,0 +1,36 @@
+{
+  "name": "ml-project",
+  "version": "1.0.0",
+  "description": "API Node.js pour exposer les résultats des modèles ML",
+  "main": "node/server.js",
+  "scripts": {
+    "start": "node node/APP.js",
+    "dev": "nodemon node/APP.js"
+  },
+  "keywords": [
+    "express",
+    "ml",
+    "python",
+    "api"
+  ],
+  "author": "TonNom",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "arquero": "^8.0.3",
+    "axios": "^1.16.1",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.3",
+    "sequelize": "^6.37.8",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

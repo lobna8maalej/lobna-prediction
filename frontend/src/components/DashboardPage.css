@@ -1,0 +1,46 @@
+.dashboard-page {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* TITRE */
+.dashboard-page h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin: 20px 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* NAVBAR */
+.dashboard-page nav,
+.dashboard-page .navbar {
+  margin-bottom: 15px;
+}
+
+/* CONTENU */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ZONE ROUTES */
+.dashboard-page > div:last-child {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 10px;
+  }
+
+  .dashboard-page h1 {
+    font-size: 22px;
+  }
+}

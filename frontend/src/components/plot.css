@@ -1,0 +1,176 @@
+/* ===========================
+   🌿 GLOBAL DASHBOARD STYLE
+=========================== */
+
+.plot-container {
+  padding: 35px;
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #f8fbff, #eef5ff, #f7faff);
+  font-family: "Segoe UI", sans-serif;
+
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* ===========================
+   ✨ TITLE STYLE
+=========================== */
+
+.plot-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+
+  color: #0f172a;
+  margin-bottom: 25px;
+
+  animation: glowSoft 3s infinite alternate;
+}
+
+/* ===========================
+   🪟 IFRAME WRAPPER
+=========================== */
+
+.plot-iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   🌈 POWER BI IFRAME (BIG + CLEAN)
+=========================== */
+
+.plot-iframe {
+  width: 98%;
+  max-width: 1500px;   /* 🔥 grand dashboard */
+  height: 760px;       /* 🔥 grande hauteur */
+
+  border: none;
+  border-radius: 22px;
+
+  background: white;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.12),
+    0 0 90px rgba(99,102,241,0.15);
+
+  transition: all 0.6s ease;
+
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* hover premium */
+.plot-iframe:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,0.18),
+    0 0 120px rgba(99,102,241,0.25);
+}
+
+/* ===========================
+   📦 STATUS
+=========================== */
+
+.plot-loading {
+  text-align: center;
+  color: #2563eb;
+  font-weight: 600;
+  animation: pulseText 1.5s infinite;
+}
+
+.plot-error {
+  text-align: center;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* ===========================
+   📊 LIST STYLE
+=========================== */
+
+.plot-list {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 18px 22px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* ===========================
+   📈 CHART AREA
+=========================== */
+
+.plot-chart {
+  margin-top: 30px;
+  padding: 25px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+/* ===========================
+   ✨ ANIMATIONS
+=========================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowSoft {
+  0% {
+    text-shadow: 0 0 8px rgba(99,102,241,0.2);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(99,102,241,0.45);
+  }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseText {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* ===========================
+   📱 RESPONSIVE
+=========================== */
+
+@media (max-width: 1024px) {
+  .plot-iframe {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plot-iframe {
+    height: 450px;
+    border-radius: 16px;
+  }
+
+  .plot-title {
+    font-size: 1.6rem;
+  }
+}

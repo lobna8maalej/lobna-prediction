@@ -1,0 +1,160 @@
+.sanitaire-container {
+  padding: 30px;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  min-height: 100vh;
+  animation: fadeIn 1s ease;
+}
+
+/* TITLE */
+.sanitaire-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 25px;
+  animation: glowText 2s infinite alternate;
+}
+
+/* IFRAME MAGIC */
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.magic-iframe {
+  width: 100%;
+  max-width: 1200px;
+  height: 650px;
+  border: none;
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4),
+              0 0 60px rgba(99, 102, 241, 0.2);
+
+  transition: all 0.5s ease;
+  animation: floatFrame 3s ease-in-out infinite;
+}
+
+.magic-iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.6),
+              0 0 80px rgba(99, 102, 241, 0.3);
+}
+
+/* PREDICTION CARD */
+.prediction-card {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+
+  animation: popIn 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* MAGIC LIGHT EFFECT */
+.prediction-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(99,102,241,0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+.prediction-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #16a34a;
+  animation: pulse 2s infinite;
+}
+
+/* CHART */
+.chart-title {
+  text-align: center;
+  margin-top: 20px;
+  color: #1e293b;
+}
+
+.chart-box {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* STATES */
+.loading {
+  text-align: center;
+  color: #2563eb;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatFrame {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #6366f1; }
+  to { text-shadow: 0 0 20px #6366f1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .magic-iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .magic-iframe {
+    height: 380px;
+  }
+
+  .prediction-value {
+    font-size: 2rem;
+  }
+}

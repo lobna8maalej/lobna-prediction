@@ -1,0 +1,137 @@
+:root {
+  --primary: #6366f1;
+  --secondary: #22c55e;
+  --bg: #f4f6ff;
+  --card: rgba(255,255,255,0.75);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+}
+
+/* ================= CONTAINER ================= */
+.ml-container {
+  padding: 40px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #eef2ff, #f8fafc);
+}
+
+/* ================= TITLE ================= */
+.ml-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+/* ================= IFRAME ================= */
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.ml-iframe {
+  width: 100%;
+  max-width: 1150px;
+  height: 620px;
+  border: none;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.ml-iframe:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= RESULT TEXT ================= */
+.result-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ================= 🔥 PIE CHART FOCUS CARD ================= */
+.pie-card {
+  max-width: 320px;      /* 🔥 PETIT BLOCS UNIQUE */
+  margin: 30px auto;
+  padding: 20px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(18px);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.10),
+    0 0 0 1px rgba(99,102,241,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: popIn 0.6s ease;
+}
+
+/* 🔥 PIE CHART SMALL SIZE ONLY HERE */
+.pie-card svg {
+  width: 180px !important;
+  height: 180px !important;
+}
+
+/* ================= PERCENTAGE ================= */
+.percentage {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-top: 10px;
+}
+
+/* ================= BUTTON ================= */
+.ml-button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ml-button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .ml-iframe {
+    height: 380px;
+  }
+
+  .pie-card {
+    max-width: 260px;
+  }
+
+  .pie-card svg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}

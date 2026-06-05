@@ -1,0 +1,89 @@
+.dash-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 16px;
+  background: #0f172a;
+  color: white;
+}
+
+/* LOGO */
+.nav-logo {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* SIDEBAR */
+.nav-center {
+  position: fixed;
+  top: 55px;
+  left: 0;
+
+  width: 180px;          /* ⬅ plus petit que avant */
+  height: 100vh;
+
+  background: #f5f5dc;   /* beige propre */
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+  padding: 10px;
+
+  overflow-y: auto;
+
+  border-right: 1px solid #ddd;
+}
+
+/* BUTTONS */
+.nav-center button {
+  background: white;
+  border: 1px solid #e5e7eb;
+
+  padding: 8px;
+  font-size: 12px;
+
+  border-radius: 6px;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* hover */
+.nav-center button:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateX(3px);
+}
+
+/* LOGOUT */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* CONTENT AREA */
+.dashboard-content {
+  margin-left: 190px; /* ⬅ adapté à nouvelle largeur */
+  padding: 15px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* TITLE */
+h1 {
+  margin-left: 190px;
+  padding: 15px;
+}
